@@ -1,28 +1,18 @@
-import React from 'react';
-import TravelPlanCard from '../Components/TravelPlanCard';
+import React from "react";
+import "./HomePage.css";
 
-const Home = () => {
-  const handleViewDetails = () => {
-    window.location.href = '/travel-plan';
-  };
-
+const HomePage = () => {
   return (
-    <div>
-      <h1>Welcome to Our Travel Agency</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        <TravelPlanCard 
-          title="Beach Paradise" 
-          description="Explore the serene beaches and vibrant nightlife." 
-          onView={handleViewDetails} 
-        />
-        <TravelPlanCard 
-          title="Mountain Adventure" 
-          description="Experience the thrill of hiking and breathtaking views." 
-          onView={handleViewDetails} 
+    <div className="homepage">
+      <div className="hero-section">
+        <img
+          src="/path-to-lighthouse-image.jpg"
+          alt="Lighthouse"
+          className="hero-image"
         />
       </div>
     </div>
   );
 };
 
-export default Home;
+export default HomePage;

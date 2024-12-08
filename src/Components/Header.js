@@ -1,19 +1,26 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./Header.css";
 
-const Header = () => (
-  <AppBar position="static">
-    <Toolbar>
-      <Typography variant="h6" sx={{ flexGrow: 1 }}>
-        Travel Agency
-      </Typography>
-      <Button color="inherit" component={Link} to="/">Home</Button>
-      <Button color="inherit" component={Link} to="/about">About Us</Button>
-      <Button color="inherit" component={Link} to="/destinations">Destinations</Button>
-      <Button color="inherit" component={Link} to="/contact">Contact Us</Button>
-    </Toolbar>
-  </AppBar>
-);
+const Header = () => {
+  return (
+    <header className="header">
+      <div className="logo">
+        <img src="/path-to-logo.png" alt="Travel Website Logo" />
+      </div>
+      <nav className="nav-links">
+        <a href="/">HOME</a>
+        <a href="/destination">DESTINATION</a>
+        <a href="/about-us">ABOUT US</a>
+        <a href="/blogs">BLOGS</a>
+        <a href="/contact-us">CONTACT US</a>
+      </nav>
+      <div className="header-buttons">
+        <button className="schedule-btn">SCHEDULE YOUR TRIP</button>
+        <button className="login-btn">BOOK ONLINE / AGENT LOGIN</button>
+      </div>
+    </header>
+  );
+};
 
 export default Header;
+
